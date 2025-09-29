@@ -13,16 +13,16 @@ public class Medico {
 
     public Medico(String rutM, String nombreM, Date fechaNacimientoM, String especialidad) {
         if (rutM == null || rutM.trim().isEmpty()) {
-            throw new IllegalArgumentException("El RUT no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("El RUT no puede ser nulo ni vacio");
         }
         if (nombreM == null || nombreM.trim().isEmpty()) {
-            throw new IllegalArgumentException("El nombre no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("El nombre no puede ser nulo ni vacio");
         }
         if (fechaNacimientoM == null) {
             throw new IllegalArgumentException("La fecha de nacimiento no puede ser nula");
         }
         if (especialidad == null || especialidad.trim().isEmpty()) {
-            throw new IllegalArgumentException("La especialidad no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("La especialidad no puede ser nulo ni vacio");
         }
 
         this.rutM = rutM;

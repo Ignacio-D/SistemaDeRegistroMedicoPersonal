@@ -14,16 +14,16 @@ public class Paciente {
     public Paciente(String rutP, String nombreP, Date fechaNacimientoP, String sexo) {
 
         if (rutP == null || rutP.trim().isEmpty()) {
-            throw new IllegalArgumentException("El RUT no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("El RUT no puede ser nulo ni vacio");
         }
         if (nombreP == null || nombreP.trim().isEmpty()) {
-            throw new IllegalArgumentException("El nombre no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("El nombre no puede ser nulo ni vacio");
         }
         if (fechaNacimientoP == null) {
             throw new IllegalArgumentException("La fecha de nacimiento no puede ser nula");
         }
         if (sexo == null || sexo.trim().isEmpty()) {
-            throw new IllegalArgumentException("El sexo no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("El sexo no puede ser nulo ni vacio");
         }
 
         this.rutP = rutP;
@@ -84,7 +84,7 @@ public class Paciente {
                 ? sdf.format(fechaNacimientoP)
                 : "N/A";
 
-        return "Paciente:"
+        return "\nPaciente:"
                 + "\n  Rut       : " + rutP
                 + "\n  Nombre    : " + nombreP
                 + "\n  FechaNac  : " + fechaSTR

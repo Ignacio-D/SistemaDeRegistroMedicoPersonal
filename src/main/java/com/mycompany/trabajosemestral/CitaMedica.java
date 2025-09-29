@@ -15,19 +15,19 @@ public class CitaMedica {
 
     public CitaMedica(Date fecha, Time hora, String lugar, Paciente paciente, Medico medico) {
         if (fecha == null) {
-            throw new IllegalArgumentException("La fecha no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("La fecha no puede ser nulo ni vacio");
         }
         if (hora == null) {
-            throw new IllegalArgumentException("La hora no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("La hora no puede ser nulo ni vacio");
         }
         if (lugar == null) {
             throw new IllegalArgumentException("El lugar no puede ser nulo");
         }
         if (paciente == null) {
-            throw new IllegalArgumentException("El paciente no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("El paciente no puede ser nulo ni vacio");
         }
         if (medico == null) {
-            throw new IllegalArgumentException("El medico no puede ser nulo ni vacío");
+            throw new IllegalArgumentException("El medico no puede ser nulo ni vacio");
         }
 
         this.fecha = fecha;
@@ -40,11 +40,11 @@ public class CitaMedica {
     public void registrar(List<CitaMedica> citas, List<Paciente> pacientes, List<Medico> medicos, CitaMedica cm) {
 
         if (!pacientes.contains(cm.paciente)) {
-            System.out.println("No se puede registrar la cita: paciente no está registrado");
+            System.out.println("No se puede registrar la cita: paciente no esta registrado");
             return;
         }
         if (!medicos.contains(cm.medico)) {
-            System.out.println("No se puede registrar la cita: médico no está registrado");
+            System.out.println("No se puede registrar la cita: medico no esta registrado");
             return;
         }
 
@@ -75,11 +75,11 @@ public class CitaMedica {
         }
 
         if (!pacientes.contains(nuevoPaciente)) {
-            System.out.println("No se puede modificar la cita: paciente no está registrado");
+            System.out.println("No se puede modificar la cita: paciente no esta registrado");
             return;
         }
         if (!medicos.contains(nuevoMedico)) {
-            System.out.println("No se puede modificar la cita: médico no está registrado");
+            System.out.println("No se puede modificar la cita: médico no esta registrado");
             return;
         }
 
@@ -100,7 +100,7 @@ public class CitaMedica {
         SimpleDateFormat sdfFecha = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat sdfHora = new SimpleDateFormat("HH:mm");
 
-        return "CitaMedica:"
+        return "\nCitaMedica:"
                 + "\n Fecha   : " + sdfFecha.format(fecha)
                 + "\n Hora    : " + sdfHora.format(hora)
                 + "\n Lugar   : " + lugar

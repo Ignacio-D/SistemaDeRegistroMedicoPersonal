@@ -43,8 +43,10 @@ public class Main {
         p1.registrar(pacientes, p1);
         m1.registrar(medicos, m1);
         cm1.registrar(citasMedicas, pacientes, medicos, cm1);
-        
+        p1.modificar(pacientes, p1, "21.412.601-4", "Ignacio Duran", fechaNacP1, "Masculino");
 
+        p2.registrar(pacientes, p2);
+        cm2.registrar(citasMedicas, pacientes, medicos, cm2);
 
         System.out.println(pacientes);
         System.out.println(medicos);
